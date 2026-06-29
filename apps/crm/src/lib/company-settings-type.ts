@@ -1,0 +1,21 @@
+export type CompanySettings = {
+  id: string;
+  user_id: string;
+  trade_name: string | null;
+  legal_name: string | null;
+  tax_id: string | null;
+  phone: string | null;
+  email: string | null;
+  website: string | null;
+  address: string | null;
+  postal_code: string | null;
+  city: string | null;
+  province: string | null;
+  country: string | null;
+  iban: string | null;
+  bank_name: string | null;
+  default_vat: number | null;
+  logo_url: string | null;
+  google_reviews_url: string | null;
+  trustpilot_url: string | null;
+};

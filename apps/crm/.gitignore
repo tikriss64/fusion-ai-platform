@@ -1,0 +1,27 @@
+# Dependencias
+node_modules/
+
+# Builds
+.output/
+dist/
+.wrangler/
+
+# Variables de entorno — NUNCA subir al repo
+.env
+.env.local
+.env.*.local
+.dev.vars
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Turbo
+.turbo/

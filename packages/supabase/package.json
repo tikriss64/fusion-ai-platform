@@ -1,0 +1,20 @@
+{
+  "name": "@fusion/supabase",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client.ts",
+    "./types": "./src/types.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.106.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

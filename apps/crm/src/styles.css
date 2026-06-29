@@ -1,0 +1,239 @@
+@import "tailwindcss" source(none);
+@import "tw-animate-css";
+@source "../src";
+/* Fuente Inter: se cargará desde el <head> en la etapa de diseño, no aquí
+   (Tailwind v4 expande @import en su sitio, por lo que un @import url() después
+   de @import "tailwindcss" rompe la regla CSS de "imports al principio"). */
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  /* Estados semánticos de la Bandeja IA (fusionado desde Inbox) */
+  --color-ok: var(--ok);
+  --color-ok-foreground: var(--ok-foreground);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-foreground: var(--warn-foreground);
+  --color-warn-soft: var(--warn-soft);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-danger-soft: var(--danger-soft);
+  --shadow-soft: 0 1px 2px 0 oklch(0 0 0 / 0.04), 0 4px 16px -4px oklch(0 0 0 / 0.06);
+}
+
+/* ─── Tema FUSION "Navy + Acción" ─────────────────────────────────────────
+   Azul marino (confianza) + naranja (acción) sobre blancos limpios.
+   Tokens espejo de @fusion/ui/styles/theme.css.
+   ───────────────────────────────────────────────────────────────────────── */
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.99 0.003 247);
+  --foreground: oklch(0.21 0.03 256);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.03 256);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.03 256);
+  /* Primario: azul marino #1E3A5F */
+  --primary: oklch(0.35 0.07 250);
+  --primary-foreground: oklch(0.98 0.003 247);
+  --secondary: oklch(0.96 0.006 247);
+  --secondary-foreground: oklch(0.3 0.04 256);
+  --muted: oklch(0.96 0.006 247);
+  --muted-foreground: oklch(0.55 0.02 256);
+  /* Acento: naranja #F97316 */
+  --accent: oklch(0.7 0.19 41);
+  --accent-foreground: oklch(0.99 0.01 80);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.98 0.003 247);
+  --border: oklch(0.92 0.006 247);
+  --input: oklch(0.92 0.006 247);
+  --ring: oklch(0.7 0.19 41);
+  --chart-1: oklch(0.35 0.07 250);
+  --chart-2: oklch(0.7 0.19 41);
+  --chart-3: oklch(0.72 0.15 160);
+  --chart-4: oklch(0.6 0.12 280);
+  --chart-5: oklch(0.65 0.15 70);
+  /* Sidebar navy con acento naranja en los items activos */
+  --sidebar: oklch(0.35 0.07 250);
+  --sidebar-foreground: oklch(0.98 0.003 247);
+  --sidebar-primary: oklch(0.7 0.19 41);
+  --sidebar-primary-foreground: oklch(0.99 0.01 80);
+  --sidebar-accent: oklch(0.4 0.07 250);
+  --sidebar-accent-foreground: oklch(0.98 0.003 247);
+  --sidebar-border: oklch(0.4 0.06 250);
+  --sidebar-ring: oklch(0.7 0.19 41);
+  /* Estados semánticos Bandeja IA — claro */
+  --ok: oklch(0.62 0.15 150);
+  --ok-foreground: oklch(0.98 0.01 150);
+  --ok-soft: oklch(0.95 0.04 150);
+  --warn: oklch(0.75 0.15 75);
+  --warn-foreground: oklch(0.2 0.05 75);
+  --warn-soft: oklch(0.96 0.05 85);
+  --danger: oklch(0.6 0.22 25);
+  --danger-foreground: oklch(0.98 0.01 25);
+  --danger-soft: oklch(0.96 0.04 25);
+}
+
+.dark {
+  --background: oklch(0.2 0.03 256);
+  --foreground: oklch(0.96 0.006 247);
+  --card: oklch(0.25 0.03 256);
+  --card-foreground: oklch(0.96 0.006 247);
+  --popover: oklch(0.25 0.03 256);
+  --popover-foreground: oklch(0.96 0.006 247);
+  --primary: oklch(0.62 0.1 250);
+  --primary-foreground: oklch(0.18 0.03 256);
+  --secondary: oklch(0.3 0.03 256);
+  --secondary-foreground: oklch(0.96 0.006 247);
+  --muted: oklch(0.3 0.03 256);
+  --muted-foreground: oklch(0.7 0.02 256);
+  --accent: oklch(0.7 0.19 41);
+  --accent-foreground: oklch(0.99 0.01 80);
+  --destructive: oklch(0.62 0.2 25);
+  --destructive-foreground: oklch(0.96 0.006 247);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.7 0.19 41);
+  --chart-1: oklch(0.62 0.1 250);
+  --chart-2: oklch(0.7 0.19 41);
+  --chart-3: oklch(0.72 0.15 160);
+  --chart-4: oklch(0.65 0.12 280);
+  --chart-5: oklch(0.68 0.15 70);
+  --sidebar: oklch(0.24 0.03 256);
+  --sidebar-foreground: oklch(0.96 0.006 247);
+  --sidebar-primary: oklch(0.7 0.19 41);
+  --sidebar-primary-foreground: oklch(0.99 0.01 80);
+  --sidebar-accent: oklch(0.3 0.03 256);
+  --sidebar-accent-foreground: oklch(0.96 0.006 247);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.7 0.19 41);
+  /* Estados semánticos Bandeja IA — oscuro */
+  --ok: oklch(0.7 0.16 150);
+  --ok-foreground: oklch(0.15 0.03 150);
+  --ok-soft: oklch(0.3 0.06 150);
+  --warn: oklch(0.8 0.16 80);
+  --warn-foreground: oklch(0.18 0.04 80);
+  --warn-soft: oklch(0.32 0.06 80);
+  --danger: oklch(0.68 0.2 25);
+  --danger-foreground: oklch(0.15 0.03 25);
+  --danger-soft: oklch(0.32 0.08 25);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Filas de tablas: realce suave al pasar el ratón (feedback sin ruido). */
+  tbody tr {
+    transition: background-color 150ms ease;
+  }
+
+  /* Scroll suave en toda la app. */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Tarjeta interactiva: leve elevación + sombra al hover. Uso: class="card-lift". */
+  .card-lift {
+    transition:
+      transform 300ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 300ms ease;
+    will-change: transform;
+  }
+  .card-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -12px color-mix(in oklch, var(--primary) 35%, transparent);
+  }
+
+  /* Aparición escalonada de listas: añade style={{animationDelay}} por índice. */
+  .stagger-item {
+    animation: fusion-rise 360ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes fusion-rise {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Accesibilidad: quien pide menos movimiento, lo recibe. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

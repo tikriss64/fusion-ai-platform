@@ -1,0 +1,42 @@
+# Dependencias
+node_modules/
+
+# Builds
+dist/
+.output/
+.vinxi/
+build/
+
+# Caché de Turborepo
+.turbo/
+
+# Entorno — NUNCA subir secretos
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+
+# Archivos de claves sueltos — NUNCA subir
+*.key
+*.pem
+API KEYS.txt
+*[Kk][Ee][Yy][Ss].txt
+*[Aa][Pp][Ii]*.txt
+secrets.txt
+crash claude.txt
+
+# Logs
+*.log
+npm-debug.log*
+bun-debug.log*
+
+# Editor / SO
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Supabase local
+supabase/.branches/
+supabase/.temp/

@@ -1,0 +1,33 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  // Nombre del Worker en Cloudflare (aparece en el dashboard)
+  "name": "fusion-crm",
+  "main": ".output/server/index.mjs",
+  "compatibility_date": "2026-06-13",
+  "compatibility_flags": ["nodejs_compat"],
+  "no_bundle": true,
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".output/public"
+  },
+  "rules": [
+    { "type": "ESModule", "globs": ["**/*.mjs", "**/*.js"] }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  // Tarea programada: cada hora (minuto 0) sincroniza y analiza los correos
+  // automáticamente (handler `scheduled` en src/server.ts). El análisis usa la
+  // IA de capa gratuita y solo procesa correos nuevos.
+  "triggers": {
+    "crons": ["0 * * * *"]
+  }
+  // SECRETOS — NO van aquí. Se añaden con:
+  //   wrangler secret put SUPABASE_URL
+  //   wrangler secret put SUPABASE_ANON_KEY
+  //   wrangler secret put SUPABASE_SERVICE_ROLE_KEY
+  //   wrangler secret put SUPABASE_DB_URL
+  //   wrangler secret put FUSION_TENANT_ID
+  //   wrangler secret put GEMINI_API_KEY     (opcional)
+  //   wrangler secret put GROQ_API_KEY       (opcional)
+}

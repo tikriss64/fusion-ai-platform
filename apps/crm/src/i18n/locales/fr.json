@@ -1,0 +1,1088 @@
+{
+  "nav": {
+    "hoy": "Aujourd'hui",
+    "bandeja": "Boîte",
+    "enviados": "Envoyés",
+    "agenda": "Agenda",
+    "esperando": "En attente",
+    "documentos": "Documents",
+    "riesgos": "Risques"
+  },
+  "shell": {
+    "appName": "AI Inbox",
+    "appSub": "Assistant",
+    "appTitle": "AI Inbox Assistant",
+    "appTagline": "Votre chef de cabinet pour les e-mails",
+    "version": "v0.1 · Étape 0",
+    "themeToggle": "Changer de thème",
+    "langToggle": "Changer de langue"
+  },
+  "notes": {
+    "title": "Notes libres",
+    "add": "Ajouter une note",
+    "remove": "Supprimer la note",
+    "placeholder": "Écrivez une note rapide…",
+    "empty": "Notez une idée ou un rappel…"
+  },
+  "ask": {
+    "placeholder": "Pose une question à ta boîte…",
+    "suggestionsTitle": "Essaie avec",
+    "thinking": "Recherche dans ta boîte…",
+    "questionLabel": "Ta question",
+    "aiAnswer": "Réponse de l'IA",
+    "relatedEmails": "E-mails liés",
+    "disclaimer": "Généré par IA à partir de tes e-mails. Vérifie avant d'agir."
+  },
+  "lock": {
+    "appName": "AI Inbox Assistant",
+    "welcome": "Bon retour. Saisissez votre code PIN pour déverrouiller votre boîte.",
+    "pinLabel": "PIN ou mot de passe",
+    "placeholder": "Saisissez votre PIN",
+    "unlock": "Déverrouiller",
+    "hint": "Verrouillage local · Vos données restent sur cet appareil.",
+    "footer": "Votre chef de cabinet pour les e-mails",
+    "inactivityWarning": "Verrouillage par inactivité dans {{seconds}} s",
+    "errorWrong": "Mot de passe incorrect. Réessaie.",
+    "errorNetwork": "Impossible de contacter le serveur. Réessaie."
+  },
+  "settings": {
+    "label": "Réglages",
+    "openFull": "Ouvrir tous les réglages",
+    "lock": {
+      "title": "Verrouillage automatique",
+      "desc": "Après ce délai sans activité, nous redemanderons le PIN.",
+      "never": "Jamais",
+      "minutes_one": "{{count}} minute",
+      "minutes_other": "{{count}} minutes",
+      "hours_one": "{{count}} heure",
+      "hours_other": "{{count}} heures"
+    }
+  },
+  "conexiones": {
+    "title": "Connexions",
+    "desc": "État des services externes. Vert = fonctionne, rouge = erreur, gris = non configuré.",
+    "status": {
+      "ok": "Connecté",
+      "error": "Erreur",
+      "idle": "Non configuré"
+    },
+    "summary": {
+      "allOk": "✅  Tout fonctionne",
+      "unset_one": "⚠️  Il y a {{count}} connexion non configurée",
+      "unset_other": "⚠️  Il y a {{count}} connexions non configurées",
+      "errors_one": "❌  Il y a {{count}} connexion en erreur",
+      "errors_other": "❌  Il y a {{count}} connexions en erreur"
+    },
+    "ai": {
+      "title": "Intelligence artificielle",
+      "test": "Tester la connexion",
+      "testing": "Test en cours…",
+      "show": "Afficher la clé",
+      "hide": "Masquer la clé",
+      "ok": "Clé valide. Connexion simulée avec succès.",
+      "errEmpty": "Collez votre clé API avant de tester.",
+      "errInvalid": "La clé ne semble pas valide. Vérifiez-la.",
+      "gemini": {
+        "name": "Gemini (moteur principal)",
+        "desc": "Utilisé pour rédiger et analyser vos e-mails.",
+        "help": "Comment obtenir ma clé gratuite ?"
+      },
+      "groq": {
+        "name": "Groq (moteur d'appoint)",
+        "desc": "Accélère les tâches rapides quand Gemini est saturé.",
+        "help": "Comment obtenir ma clé gratuite ?"
+      }
+    },
+    "mail": {
+      "title": "E-mail",
+      "bigTitle": "Connectez votre compte e-mail",
+      "bigDesc": "Choisissez votre fournisseur. Nous vous emmenons vers une connexion sécurisée.",
+      "connectGmail": "Se connecter avec Gmail",
+      "connectOutlook": "Se connecter avec Outlook",
+      "note": "Nous ne stockons pas votre mot de passe. Juste un jeton révocable.",
+      "connectedVia": "Connectée via {{provider}}",
+      "disconnect": "Déconnecter"
+    },
+    "footerNote": "Les données de connexion sont enregistrées uniquement sur cet appareil. Aucun backend cloud."
+  },
+  "ajustes": {
+    "title": "Réglages",
+    "subtitle": "Personnalisez la sécurité, l'apparence et la confidentialité de votre assistant.",
+    "security": {
+      "title": "Sécurité",
+      "desc": "Protégez votre accès local à l'application.",
+      "pin": {
+        "title": "PIN local",
+        "desc": "Le PIN est enregistré uniquement sur cet appareil. Il n'est envoyé à aucun serveur.",
+        "statusSet": "PIN configuré",
+        "statusUnset": "Aucun PIN défini",
+        "oldPlaceholder": "PIN actuel",
+        "newPlaceholder": "Nouveau PIN (min. 4)",
+        "confirmPlaceholder": "Répétez le nouveau PIN",
+        "save": "Enregistrer le PIN",
+        "ok": "PIN mis à jour avec succès.",
+        "errOld": "Le PIN actuel ne correspond pas.",
+        "errShort": "Le PIN doit contenir au moins 4 caractères.",
+        "errMatch": "Les deux nouveaux PIN ne correspondent pas.",
+        "errGeneric": "Impossible d'enregistrer le PIN."
+      },
+      "recovery": {
+        "title": "Code de récupération",
+        "desc": "Si vous oubliez votre PIN, ce code permet de retrouver l'accès. Gardez-le en lieu sûr (gestionnaire de mots de passe, papier rangé, etc.). Il n'est affiché qu'ici : personne d'autre ne le connaît.",
+        "regen": "Régénérer",
+        "show": "Afficher le code",
+        "hide": "Masquer le code",
+        "copy": "Copier",
+        "copied": "Copié"
+      },
+      "reset": {
+        "title": "Réinitialiser l'application",
+        "desc": "Efface toutes les données locales (PIN, notes, préférences). Vos e-mails sur le serveur ne sont PAS touchés.",
+        "action": "Réinitialiser…",
+        "confirmText": "Cela effacera votre PIN, vos notes et vos préférences enregistrées sur cet appareil. Cela n'affecte pas les e-mails de votre serveur. Continuer ?",
+        "cancel": "Annuler",
+        "confirm": "Oui, tout effacer",
+        "done": "Réinitialisé. Rechargement…"
+      }
+    },
+    "appearance": {
+      "title": "Apparence",
+      "desc": "Changez la langue et l'apparence visuelle.",
+      "lang": {
+        "title": "Langue",
+        "desc": "Change la langue de toute l'interface."
+      },
+      "theme": {
+        "title": "Thème",
+        "desc": "Choisissez clair, sombre ou suivez le système.",
+        "light": "Clair",
+        "dark": "Sombre",
+        "auto": "Automatique"
+      },
+      "note": "Les préférences sont enregistrées uniquement sur cet appareil."
+    },
+    "privacy": {
+      "title": "Confidentialité",
+      "desc": "Comment vos données sont traitées.",
+      "body": "Tes e-mails sont stockés sur ton propre serveur privé Cloudflare, sous ton contrôle. Pour l'analyse par IA, seuls de courts extraits sont envoyés à Google Gemini ou Groq —jamais l'e-mail complet— avec tes propres clés.",
+      "bullet1": "Aucune télémétrie commerciale ni profil d'utilisation.",
+      "bullet2": "Votre PIN, vos notes et préférences restent ici.",
+      "bullet3": "Vous pouvez réinitialiser l'application à tout moment."
+    },
+    "account": {
+      "title": "Compte de messagerie",
+      "desc": "Connexion à votre fournisseur d'e-mail (prochainement).",
+      "connected": "Connectée",
+      "disconnected": "Déconnectée",
+      "none": "Aucun compte connecté",
+      "disconnect": "Déconnecter",
+      "connect": "Reconnecter",
+      "placeholderNote": "Cette section est un aperçu : la connexion réelle à votre messagerie sera ajoutée plus tard."
+    }
+  },
+  "snooze": {
+    "label": "Reporter",
+    "thisAfternoon": "Cet après-midi",
+    "tomorrow": "Demain",
+    "monday": "Lundi",
+    "pickDate": "Choisir une date",
+    "cancel": "Annuler",
+    "confirm": "Reporter",
+    "snoozedTitle": "E-mails reportés",
+    "snoozedCount": "{{count}} en attente",
+    "until": "revient {{date}}",
+    "restore": "Remettre dans la boîte"
+  },
+  "meta": {
+    "hoy": "Aujourd'hui · AI Inbox Assistant",
+    "bandeja": "Boîte · AI Inbox Assistant",
+    "enviados": "Envoyés · AI Inbox Assistant",
+    "esperando": "En attente · AI Inbox Assistant",
+    "documentos": "Documents · AI Inbox Assistant",
+    "riesgos": "Risques · AI Inbox Assistant",
+    "description": "Votre résumé du jour dans vos e-mails."
+  },
+  "hoy": {
+    "greeting": "Bonjour. Voici ce qui compte aujourd'hui :",
+    "debtLabel": "Dette de communication",
+    "debtMuch": "Beaucoup de retard",
+    "debtMid": "Ça avance, continue",
+    "debtLow": "Presque à jour",
+    "doneOf": "{{done}}/{{total}} fait",
+    "markDone": "Marquer comme fait",
+    "celebTitle": "Boîte sous contrôle 🎉",
+    "celebSub": "Rien d'urgent ne t'attend. Profite du café ☕",
+    "items": [
+      {
+        "id": "b1",
+        "text": "1 client a l'air en colère → Marta (réclamation)",
+        "hint": "Aïe, Marta a envoyé 3 e-mails de plus en plus tendus. À ta place, je l'appellerais 📞"
+      },
+      {
+        "id": "b2",
+        "text": "2 de tes promesses arrivent à échéance aujourd'hui → devis pour Juan",
+        "hint": "Tenir parole aujourd'hui = zéro drame demain. Tu gères ✨"
+      },
+      {
+        "id": "b3",
+        "text": "3 personnes attendent quelque chose de toi",
+        "hint": "Rien d'urgent, mais le silence se remarque. Une ligne suffit."
+      },
+      {
+        "id": "b4",
+        "text": "1 opportunité détectée → « vous faites de la maintenance ? »",
+        "hint": "Ça sent les 3 000-5 000 €. Ne la laisse pas refroidir 🔥"
+      },
+      {
+        "id": "b5",
+        "text": "1 facture arrive à échéance le 15/06 → 850 €",
+        "hint": "Il reste de la marge. Je te rappelle vendredi."
+      }
+    ]
+  },
+  "enviados": {
+    "title": "Envoyés",
+    "subtitle": "Vos derniers e-mails envoyés",
+    "count": "{{count}} e-mails envoyés",
+    "empty": "Aucun e-mail envoyé synchronisé pour le moment.",
+    "to": "À :",
+    "loading": "Chargement des envoyés…"
+  },
+  "bandeja": {
+    "title": "Boîte",
+    "count": "{{count}} e-mails priorisés par l'IA",
+    "types": {
+      "Cliente": "Client",
+      "Proveedor": "Fournisseur",
+      "Reclamación": "Réclamation",
+      "Comercial": "Commercial",
+      "Urgente": "Urgent",
+      "Info": "Informatif",
+      "Ruido": "Bruit"
+    },
+    "actions": {
+      "Responder": "Répondre",
+      "Crear tarea": "Créer une tâche",
+      "Archivar": "Archiver"
+    },
+    "emails": [
+      {
+        "id": "1",
+        "type": "Reclamación",
+        "sender": "Marta López · Acme S.L.",
+        "subject": "Re : Devis non reçu",
+        "summary": "La cliente n'a pas reçu le devis promis et montre son impatience.",
+        "promise": "Tu as promis d'envoyer le devis lundi",
+        "toneWarning": "Ton : insatisfait",
+        "action": "Responder",
+        "time": "08:14",
+        "contact": {
+          "id": "1",
+          "name": "Marta López",
+          "initials": "ML",
+          "role": "Directrice des achats · Acme S.L.",
+          "since": "2021",
+          "emails": 47,
+          "calls": 6,
+          "lastInteraction": "il y a 3 jours",
+          "pending": "Devis de 2 400 € non finalisé",
+          "promisesFromYou": "Tu lui as promis d'envoyer le devis lundi",
+          "tone": "Directe et exigeante. Apprécie les réponses rapides et concrètes."
+        },
+        "effort": "long"
+      },
+      {
+        "id": "2",
+        "type": "Cliente",
+        "sender": "Carlos Ruiz · TechNova",
+        "subject": "Mise à jour du projet web",
+        "summary": "Demande une réunion pour examiner l'avancement de la refonte.",
+        "action": "Responder",
+        "time": "09:32",
+        "contact": {
+          "id": "2",
+          "name": "Carlos Ruiz",
+          "initials": "CR",
+          "role": "CTO · TechNova",
+          "since": "2022",
+          "emails": 14,
+          "calls": 3,
+          "lastInteraction": "il y a 2 semaines",
+          "pending": "Revue du prototype v2 en attente",
+          "promisesFromThem": "Il t'a promis un retour sur le design mardi",
+          "tone": "Cordial et technique. Préfère les e-mails détaillés avec des données."
+        },
+        "effort": "medium"
+      },
+      {
+        "id": "3",
+        "type": "Urgente",
+        "sender": "Support · Serveur Cloud",
+        "subject": "Alerte : latence élevée sur le nœud EU-3",
+        "summary": "Le moniteur détecte des pics de latence supérieurs à 2 s depuis 06:00.",
+        "action": "Crear tarea",
+        "time": "07:55",
+        "contact": {
+          "id": "3",
+          "name": "Support Cloud",
+          "initials": "SC",
+          "role": "Système de monitoring",
+          "since": "2020",
+          "emails": 312,
+          "calls": 0,
+          "lastInteraction": "il y a 4 heures",
+          "tone": "Automatique. Alertes techniques sans ton émotionnel."
+        },
+        "effort": "quick"
+      },
+      {
+        "id": "4",
+        "type": "Comercial",
+        "sender": "Elena Vega · Consultora Delta",
+        "subject": "Faites-vous de la maintenance d'infrastructure ?",
+        "summary": "Prospect demande des services de maintenance mensuelle.",
+        "promise": "Opportunité détectée",
+        "action": "Responder",
+        "time": "10:05",
+        "contact": {
+          "id": "4",
+          "name": "Elena Vega",
+          "initials": "EV",
+          "role": "Associée · Consultora Delta",
+          "since": "Nouveau contact",
+          "emails": 2,
+          "calls": 0,
+          "lastInteraction": "premier contact aujourd'hui",
+          "pending": "Pas encore d'offre envoyée · opportunité ~12 000 €/an",
+          "tone": "Exploratoire. Encore prudente, cherche des signes de confiance."
+        },
+        "effort": "medium"
+      },
+      {
+        "id": "5",
+        "type": "Proveedor",
+        "sender": "Raúl Méndez · HostingPro",
+        "subject": "Renouvellement du contrat annuel",
+        "summary": "Le contrat expire dans 30 jours ; remise pour paiement anticipé.",
+        "action": "Archivar",
+        "time": "Hier",
+        "contact": {
+          "id": "5",
+          "name": "Raúl Méndez",
+          "initials": "RM",
+          "role": "Account Manager · HostingPro",
+          "since": "2019",
+          "emails": 28,
+          "calls": 5,
+          "lastInteraction": "il y a 1 mois",
+          "pending": "Décision de renouvellement avant le 30/06",
+          "tone": "Commercial et aimable. Pousse souvent avec des remises."
+        },
+        "effort": "quick"
+      },
+      {
+        "id": "6",
+        "type": "Cliente",
+        "sender": "Ana Torres · Boutique Verde",
+        "subject": "Modifications de la commande n°4821",
+        "summary": "Veut ajouter 12 unités de plus et changer l'adresse de livraison.",
+        "action": "Responder",
+        "time": "11:20",
+        "contact": {
+          "id": "6",
+          "name": "Ana Torres",
+          "initials": "AT",
+          "role": "Propriétaire · Boutique Verde",
+          "since": "2023",
+          "emails": 19,
+          "calls": 2,
+          "lastInteraction": "il y a 5 jours",
+          "promisesFromYou": "Tu lui as promis de confirmer la disponibilité aujourd'hui",
+          "tone": "Proche et enthousiaste. Apprécie le contact personnel."
+        },
+        "effort": "medium"
+      },
+      {
+        "id": "7",
+        "type": "Comercial",
+        "sender": "Diego Soto · Financiera Norte",
+        "subject": "Proposition de partenariat stratégique",
+        "summary": "Intéressés par l'intégration de notre API dans leur plateforme de facturation.",
+        "action": "Crear tarea",
+        "time": "Hier",
+        "contact": {
+          "id": "7",
+          "name": "Diego Soto",
+          "initials": "DS",
+          "role": "Head of Partnerships · Financiera Norte",
+          "since": "Nouveau contact",
+          "emails": 4,
+          "calls": 1,
+          "lastInteraction": "il y a 1 jour",
+          "pending": "Appel de découverte à planifier",
+          "promisesFromThem": "Il t'a promis d'envoyer le NDA cette semaine",
+          "tone": "Corporate et formel. Mesure chaque pas."
+        },
+        "effort": "long"
+      },
+      {
+        "id": "8",
+        "type": "Proveedor",
+        "sender": "Laura Giménez · Diseño Studio",
+        "subject": "Livraison des assets de branding",
+        "summary": "Joint les fichiers finaux dans Figma et commente les ajustements de couleur.",
+        "promise": "Tu attends la livraison pour finaliser la landing",
+        "action": "Responder",
+        "time": "12:45",
+        "contact": {
+          "id": "8",
+          "name": "Laura Giménez",
+          "initials": "LG",
+          "role": "Directrice créative · Diseño Studio",
+          "since": "2022",
+          "emails": 36,
+          "calls": 4,
+          "lastInteraction": "aujourd'hui",
+          "promisesFromThem": "Elle t'a promis les assets finaux vendredi",
+          "tone": "Créative et collaborative. Demande un retour visuel clair."
+        },
+        "effort": "quick"
+      }
+    ],
+    "effort": {
+      "quick": "⚡ 1 min",
+      "medium": "✍️ 5 min",
+      "long": "🧠 besoin de temps"
+    },
+    "filterFiveMinutes": "J'ai 5 minutes",
+    "showAll": "Tous"
+  },
+  "esperando": {
+    "title": "Réseau d'engagements",
+    "subtitle": "Tout ce que tu dois et tout ce qu'on te doit, au même endroit.",
+    "tabMe": "Ils attendent quelque chose de moi",
+    "tabOthers": "J'attends quelque chose des autres",
+    "tabFollowups": "Relances",
+    "followupsIntro": "E-mails que tu as envoyés et qui restent sans réponse. L'IA les classe par ancienneté et priorité.",
+    "followupStatus": {
+      "ok": "Récent",
+      "warn": "Attention",
+      "danger": "Urgent"
+    },
+    "sendReminder": "Envoyer un rappel courtois",
+    "reminderTitle": "Brouillon de relance",
+    "reminderTo": "À {{person}}",
+    "subjectLabel": "Objet",
+    "reminderSubject": "Re : {{subject}}",
+    "copy": "Copier",
+    "copied": "Copié",
+    "send": "Envoyer",
+    "sent": "Envoyé",
+    "reminderTemplate": "Bonjour {{person}},\n\nJuste un petit rappel concernant mon e-mail « {{subject}} » envoyé il y a {{days}} jours. J'imagine que tu es chargé(e), donc pas d'urgence.\n\n{{context}}\n\nSi tu préfères que je te renvoie le message ou qu'on en parle par téléphone, dis-le moi et on s'organise.\n\nMerci et à bientôt,",
+    "status": {
+      "ok": "Dans les temps",
+      "warn": "Bientôt",
+      "danger": "Échu"
+    },
+    "me": [
+      {
+        "id": "w1",
+        "person": "Juan García",
+        "initials": "JG",
+        "what": "Devis de rénovation",
+        "when": "3 jours",
+        "status": "warn"
+      },
+      {
+        "id": "w2",
+        "person": "Ana López",
+        "initials": "AL",
+        "what": "Revoir la proposition marketing",
+        "when": "1 jour",
+        "status": "danger"
+      },
+      {
+        "id": "w3",
+        "person": "Carlos Ruiz",
+        "initials": "CR",
+        "what": "Contrat signé",
+        "when": "5 jours",
+        "status": "ok"
+      },
+      {
+        "id": "w4",
+        "person": "Elena Martín",
+        "initials": "EM",
+        "what": "Rapport trimestriel",
+        "when": "aujourd'hui",
+        "status": "danger"
+      },
+      {
+        "id": "w5",
+        "person": "Support technique",
+        "initials": "ST",
+        "what": "Résoudre l'incident n°4421",
+        "when": "2 jours",
+        "status": "warn"
+      }
+    ],
+    "others": [
+      {
+        "id": "o1",
+        "person": "Marta Sánchez",
+        "initials": "MS",
+        "what": "Contrat de maintenance",
+        "when": "expirait hier",
+        "status": "danger"
+      },
+      {
+        "id": "o2",
+        "person": "Raúl Gómez",
+        "initials": "RG",
+        "what": "Devis ajusté",
+        "when": "expire demain",
+        "status": "warn"
+      },
+      {
+        "id": "o3",
+        "person": "Laura Pérez",
+        "initials": "LP",
+        "what": "Date de livraison du projet",
+        "when": "cette semaine",
+        "status": "ok"
+      },
+      {
+        "id": "o4",
+        "person": "Diego Fernández",
+        "initials": "DF",
+        "what": "Validation du design",
+        "when": "expiré il y a 3 jours",
+        "status": "danger"
+      }
+    ],
+    "followups": [
+      {
+        "id": "f1",
+        "person": "Sergio Castro",
+        "initials": "SC",
+        "email": "sergio.castro@innovatec.es",
+        "subject": "Proposition d'intégration API v2",
+        "sentAgo": "sans réponse depuis 9 jours",
+        "days": 9,
+        "status": "danger",
+        "context": "Je t'ai envoyé la proposition technique avec deux options d'intégration et un calendrier indicatif."
+      },
+      {
+        "id": "f2",
+        "person": "Beatriz Romero",
+        "initials": "BR",
+        "email": "b.romero@clinicasur.com",
+        "subject": "Confirmation de visite commerciale",
+        "sentAgo": "sans réponse depuis 6 jours",
+        "days": 6,
+        "status": "warn",
+        "context": "Je t'avais proposé trois créneaux cette semaine pour passer à la clinique voir le nouvel équipement."
+      },
+      {
+        "id": "f3",
+        "person": "Pablo Navarro",
+        "initials": "PN",
+        "email": "pablo@navarroasociados.es",
+        "subject": "Brouillon de contrat révisé",
+        "sentAgo": "sans réponse depuis 12 jours",
+        "days": 12,
+        "status": "danger",
+        "context": "Je t'ai envoyé le brouillon avec les changements demandés sur la clause 7. Il ne manque que ton accord pour signer."
+      },
+      {
+        "id": "f4",
+        "person": "Nuria Vidal",
+        "initials": "NV",
+        "email": "nuria.vidal@grupovistamar.com",
+        "subject": "Devis événement corporate",
+        "sentAgo": "sans réponse depuis 4 jours",
+        "days": 4,
+        "status": "warn",
+        "context": "Je t'ai joint le devis finalisé pour l'événement de septembre avec deux formats de traiteur."
+      },
+      {
+        "id": "f5",
+        "person": "Andrés Peña",
+        "initials": "AP",
+        "email": "apena@retailflow.io",
+        "subject": "Démo du nouveau dashboard",
+        "sentAgo": "sans réponse depuis 2 jours",
+        "days": 2,
+        "status": "ok",
+        "context": "Je t'ai transmis le lien vers la démo personnalisée avec les données de ton magasin pilote."
+      },
+      {
+        "id": "f6",
+        "person": "Cristina Soler",
+        "initials": "CS",
+        "email": "csoler@bufetelegalpro.com",
+        "subject": "Documents en attente du dossier",
+        "sentAgo": "sans réponse depuis 15 jours",
+        "days": 15,
+        "status": "danger",
+        "context": "Il manque les deux justificatifs dont nous avons parlé pour pouvoir clôturer le dossier ce mois-ci."
+      },
+      {
+        "id": "f7",
+        "person": "Iván Reyes",
+        "initials": "IR",
+        "email": "ivan.reyes@logisnorte.es",
+        "subject": "Réunion de suivi Q2",
+        "sentAgo": "sans réponse depuis 5 jours",
+        "days": 5,
+        "status": "warn",
+        "context": "Je voulais confirmer avec toi si on garde la date du vendredi 27 à 10h00."
+      }
+    ]
+  },
+  "documentos": {
+    "title": "Documents",
+    "subtitle": "Téléverse des factures, contrats ou devis et extrais les données clés.",
+    "dropTitle": "Glisse ici une facture, un contrat ou un devis",
+    "dropSub": "ou clique pour sélectionner des PDF ou des photos",
+    "processed": "Documents traités",
+    "viewData": "Voir les données",
+    "extracted": "{{type}} · données extraites (modifiables)",
+    "cancel": "Annuler",
+    "save": "Valider et enregistrer",
+    "processing": "Traitement des données…",
+    "extracting": "Extraction des champs…",
+    "stateLabel": "État",
+    "now": "à l'instant",
+    "types": {
+      "Factura": "Facture",
+      "Contrato": "Contrat",
+      "Presupuesto": "Devis",
+      "CV": "CV"
+    },
+    "items": [
+      {
+        "id": "d1",
+        "type": "Factura",
+        "filename": "facture-iberdrola-juin.pdf",
+        "uploadedAt": "aujourd'hui, 09:14",
+        "summary": "Iberdrola · 142,80 € · échéance 15/06",
+        "fields": [
+          {
+            "key": "emisor",
+            "label": "Émetteur",
+            "value": "Iberdrola Clientes S.A.U."
+          },
+          {
+            "key": "numero",
+            "label": "N° de facture",
+            "value": "FE25-0094821"
+          },
+          {
+            "key": "importe",
+            "label": "Montant",
+            "value": "142,80 €"
+          },
+          {
+            "key": "fecha",
+            "label": "Date d'émission",
+            "value": "01/06/2026"
+          },
+          {
+            "key": "vencimiento",
+            "label": "Échéance",
+            "value": "15/06/2026"
+          },
+          {
+            "key": "iva",
+            "label": "TVA",
+            "value": "21 %"
+          }
+        ]
+      },
+      {
+        "id": "d2",
+        "type": "Contrato",
+        "filename": "contrat-marta-services.pdf",
+        "uploadedAt": "hier",
+        "summary": "Marta López · 12 mois · 2 400 €/mois",
+        "fields": [
+          {
+            "key": "parte",
+            "label": "Cocontractant",
+            "value": "Marta López García"
+          },
+          {
+            "key": "objeto",
+            "label": "Objet",
+            "value": "Services de conseil"
+          },
+          {
+            "key": "duracion",
+            "label": "Durée",
+            "value": "12 mois"
+          },
+          {
+            "key": "importe",
+            "label": "Montant mensuel",
+            "value": "2 400 €"
+          },
+          {
+            "key": "inicio",
+            "label": "Date de début",
+            "value": "01/07/2026"
+          },
+          {
+            "key": "clausula",
+            "label": "Clause de préavis",
+            "value": "30 jours"
+          }
+        ]
+      },
+      {
+        "id": "d3",
+        "type": "Presupuesto",
+        "filename": "devis-juan-renovation.pdf",
+        "uploadedAt": "il y a 2 jours",
+        "summary": "Juan Pérez · 8 500 € · valable 30 jours",
+        "fields": [
+          {
+            "key": "cliente",
+            "label": "Client",
+            "value": "Juan Pérez"
+          },
+          {
+            "key": "concepto",
+            "label": "Objet",
+            "value": "Rénovation bureau 2e étage"
+          },
+          {
+            "key": "subtotal",
+            "label": "Sous-total",
+            "value": "7 024,79 €"
+          },
+          {
+            "key": "iva",
+            "label": "TVA (21 %)",
+            "value": "1 475,21 €"
+          },
+          {
+            "key": "total",
+            "label": "Total",
+            "value": "8 500,00 €"
+          },
+          {
+            "key": "validez",
+            "label": "Validité",
+            "value": "30 jours"
+          }
+        ]
+      },
+      {
+        "id": "d4",
+        "type": "CV",
+        "filename": "cv-elena-rodriguez.pdf",
+        "uploadedAt": "il y a 4 jours",
+        "summary": "Elena Rodríguez · Designer UX · 6 ans d'exp.",
+        "fields": [
+          {
+            "key": "nombre",
+            "label": "Nom",
+            "value": "Elena Rodríguez"
+          },
+          {
+            "key": "puesto",
+            "label": "Poste visé",
+            "value": "Designer UX Senior"
+          },
+          {
+            "key": "experiencia",
+            "label": "Expérience",
+            "value": "6 ans"
+          },
+          {
+            "key": "email",
+            "label": "E-mail",
+            "value": "elena.rodriguez@mail.com"
+          },
+          {
+            "key": "telefono",
+            "label": "Téléphone",
+            "value": "+34 612 345 678"
+          },
+          {
+            "key": "ubicacion",
+            "label": "Localisation",
+            "value": "Madrid"
+          }
+        ]
+      }
+    ]
+  },
+  "riesgos": {
+    "title": "Radar d'entreprise",
+    "subtitle": "Risques, opportunités et signaux d'alerte en un coup d'œil.",
+    "criticalAlerts": "<0>{{count}} alertes critiques</0> demandent ton attention maintenant.",
+    "status": {
+      "danger": "Critique",
+      "warn": "Attention",
+      "ok": "Actif"
+    },
+    "categories": {
+      "riesgo": {
+        "label": "Risques",
+        "subtitle": "Action immédiate requise"
+      },
+      "oportunidad": {
+        "label": "Opportunités",
+        "subtitle": "Valeur potentielle détectée"
+      },
+      "silencio": {
+        "label": "Silences dangereux",
+        "subtitle": "Clients sans contact récent"
+      }
+    },
+    "items": [
+      {
+        "id": "r1",
+        "category": "riesgo",
+        "icon": "Users",
+        "title": "Client en colère",
+        "description": "Marta López · Réclamation service",
+        "detail": "Dernier e-mail : hier · Ton : insatisfait",
+        "status": "danger"
+      },
+      {
+        "id": "r2",
+        "category": "riesgo",
+        "icon": "Receipt",
+        "title": "Facture impayée",
+        "description": "Client : Constructores del Norte",
+        "detail": "Échue il y a 12 jours · 3 200 €",
+        "status": "danger",
+        "value": "3 200 €"
+      },
+      {
+        "id": "r3",
+        "category": "riesgo",
+        "icon": "FileClock",
+        "title": "Contrat sur le point d'expirer",
+        "description": "Maintenance annuelle avec Iberdrola",
+        "detail": "Expire dans 8 jours · Non renouvelé",
+        "status": "warn"
+      },
+      {
+        "id": "r4",
+        "category": "riesgo",
+        "icon": "Handshake",
+        "title": "Promesse non tenue",
+        "description": "Devis pour Juan García",
+        "detail": "Échue il y a 3 jours · Non envoyé",
+        "status": "danger"
+      },
+      {
+        "id": "o1",
+        "category": "oportunidad",
+        "icon": "TrendingUp",
+        "title": "Maintenance détectée",
+        "description": "Client : Soluciones Tecnológicas S.A.",
+        "detail": "A demandé une maintenance mensuelle",
+        "status": "ok",
+        "value": "3 000-5 000 €"
+      },
+      {
+        "id": "o2",
+        "category": "oportunidad",
+        "icon": "TrendingUp",
+        "title": "Extension de service",
+        "description": "Client : Clínica Dental Norte",
+        "detail": "Intérêt pour le nouveau module CRM",
+        "status": "ok",
+        "value": "1 800 €/an"
+      },
+      {
+        "id": "o3",
+        "category": "oportunidad",
+        "icon": "TrendingUp",
+        "title": "Recommandation commerciale",
+        "description": "De : Laura Pérez (client actuel)",
+        "detail": "A recommandé un collègue du secteur",
+        "status": "ok"
+      },
+      {
+        "id": "s1",
+        "category": "silencio",
+        "icon": "Timer",
+        "title": "Sans contact prolongé",
+        "description": "Client : Grupo Hotelero Mediterráneo",
+        "detail": "42 jours sans interaction · Client VIP",
+        "status": "warn"
+      },
+      {
+        "id": "s2",
+        "category": "silencio",
+        "icon": "Timer",
+        "title": "Aucune réponse à la proposition",
+        "description": "Devis envoyé à Carlos Ruiz",
+        "detail": "18 jours depuis l'envoi · Sans retour",
+        "status": "warn"
+      },
+      {
+        "id": "s3",
+        "category": "silencio",
+        "icon": "Timer",
+        "title": "Client inactif",
+        "description": "María Sánchez · Projet en pause",
+        "detail": "27 jours sans nouvelles · À revoir",
+        "status": "ok"
+      }
+    ]
+  },
+  "context": {
+    "label": "Contexte",
+    "empty": "Sélectionne un e-mail pour voir le contexte",
+    "relation": "Relation",
+    "clientSince": "Client depuis {{since}}",
+    "emails": "{{count}} e-mails",
+    "calls": "{{count}} appels",
+    "lastInteraction": "Dernière interaction",
+    "pending": "En attente",
+    "promises": "Promesses",
+    "tone": "Ton habituel"
+  },
+  "composer": {
+    "title": "Compositeur de tons",
+    "replyTo": "Répondre à {{sender}}",
+    "rePrefix": "Re : {{subject}}",
+    "close": "Fermer",
+    "calmTitle": "Attends une seconde.",
+    "calmBody": "Cet e-mail est tendu. Je t'ai préparé plusieurs façons de répondre qui protègent la relation.",
+    "chooseTone": "Choisis le ton",
+    "preview": "Aperçu",
+    "editing": "édition",
+    "edit": "Modifier",
+    "done": "OK",
+    "copy": "Copier",
+    "copied": "Copié",
+    "send": "Envoyer",
+    "myStyle": "À mon style",
+    "tones": {
+      "neutro": {
+        "label": "Neutre pro",
+        "text": "Bonjour,\n\nMerci pour votre message. J'ai examiné le dossier et je vous confirme que vous recevrez le devis détaillé avant la fin de la journée.\n\nDésolé pour le retard et merci pour votre patience. À votre disposition pour toute question.\n\nCordialement,",
+        "textStyle": "Bonjour,\n\nJ'ai examiné le dossier et je te confirme que tu recevras le devis avant la fin de la journée. Pardon pour le retard et merci pour ta patience.\n\nBien à toi,",
+        "thermo": "Sonne professionnel et équilibré"
+      },
+      "calido": {
+        "label": "Chaleureux",
+        "text": "Bonjour,\n\nTout d'abord, merci de m'avoir écrit et je comprends parfaitement votre frustration : vous étiez en droit d'attendre le devis.\n\nJe vous l'envoie aujourd'hui même, sans faute, et je veille à ce qu'il soit soigné dans les moindres détails.\n\nMerci sincèrement pour votre patience,",
+        "textStyle": "Bonjour,\n\nJe comprends parfaitement ta frustration : tu avais raison d'attendre le devis. Je te l'envoie aujourd'hui même, sans faute, et je veille à ce qu'il soit soigné dans les moindres détails.\n\nMerci sincèrement — tu es génial,",
+        "thermo": "Proche, répare la relation"
+      },
+      "firme": {
+        "label": "Ferme et poli",
+        "text": "Bonjour,\n\nVous avez raison de réclamer : le devis aurait dû arriver plus tôt. J'assume le retard.\n\nVous le recevrez aujourd'hui avec des délais et conditions clairs. Nous déciderons ensuite ensemble des étapes suivantes.\n\nMerci,",
+        "textStyle": "Bonjour,\n\nTu as raison de réclamer : le devis aurait dû arriver plus tôt. J'assume le retard.\n\nTu le recevras aujourd'hui avec des délais et conditions clairs. Nous déciderons ensuite ensemble des étapes suivantes.\n\nMerci bien,",
+        "thermo": "Sonne ferme mais correct"
+      },
+      "ironico": {
+        "label": "Ironique / amusé",
+        "text": "Bonjour,\n\nVous avez tout à fait raison : un jour de plus et ça ressemblait presque à un suspense. 😅\n\nLe devis arrive aujourd'hui même, cette fois sans entourloupe.\n\nMille mercis pour votre patience,",
+        "textStyle": "Bonjour,\n\nTu as tout à fait raison : un jour de plus et ça ressemblait presque à un suspense. 😅\n\nLe devis arrive aujourd'hui même, cette fois sans entourloupe.\n\nMille mercis — tu es génial,",
+        "thermo": "Risqué : seulement s'il y a de la confiance"
+      },
+      "cortante": {
+        "label": "Sec mais correct",
+        "text": "Bonjour,\n\nBien reçu. Je vous envoie le devis aujourd'hui.\n\nCordialement,",
+        "textStyle": "Bonjour,\n\nBien reçu. Je t'envoie le devis aujourd'hui.\n\nBien à toi,",
+        "thermo": "Sonne sec, peut refroidir la relation"
+      }
+    },
+    "voice": {
+      "start": "Répondre à la voix",
+      "stop": "Arrêter",
+      "listening": "À l'écoute…",
+      "drafting": "Rédaction de la réponse…",
+      "hint": "Parle naturellement, je la rédige proprement.",
+      "mockTranscript": "Bonjour, merci pour ton message, je t'envoie demain le devis actualisé et on confirme la date de la réunion sans faute."
+    }
+  },
+  "agenda": {
+    "title": "Agenda",
+    "subtitle": "Événements détectés automatiquement depuis tes e-mails et tâches.",
+    "today": "Aujourd'hui",
+    "addEvent": "Ajouter",
+    "addTitle": "Nouvel événement",
+    "dayPanel": "Événements du jour",
+    "emptyDay": "Rien à l'agenda pour ce jour.",
+    "manual": "Manuel",
+    "manualBody": "Événement ajouté manuellement.",
+    "origin": "Origine détectée",
+    "legend": "Légende",
+    "legendOk": "Dans les temps",
+    "legendWarn": "Attention",
+    "legendDanger": "Urgent",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "fieldTitle": "Titre",
+    "fieldTitlePh": "Ex. Appeler Marta",
+    "fieldType": "Type",
+    "fieldStatus": "État",
+    "fieldDate": "Date",
+    "fieldHour": "Heure",
+    "types": {
+      "promise": "Promesse",
+      "invoice": "Facture",
+      "followup": "Relance",
+      "meeting": "Réunion"
+    },
+    "events": {
+      "promise.marta": "Envoyer le devis à Marta",
+      "promise.juan": "Confirmer les délais à Juan",
+      "promise.ana": "Confirmer la disponibilité à Ana",
+      "promise.contrato": "Renouveler le contrat HostingPro",
+      "meeting.carlos": "Réunion avec Carlos (TechNova)",
+      "meeting.diego": "Appel de découverte · Diego",
+      "meeting.raul": "Revue annuelle avec Raúl",
+      "followup.elena": "Suivre l'opportunité d'Elena Vega",
+      "followup.laura": "Demander un retour à Laura sur les assets",
+      "followup.maria": "Relancer le projet de María",
+      "invoice.iberdrola": "Facture Iberdrola · 142,80 €",
+      "invoice.constructores": "Facture Constructores Norte · 3 200 €",
+      "invoice.hosting": "Renouvellement HostingPro · 1 200 €"
+    },
+    "sources": {
+      "source.marta": "E-mail : « Re : Devis non reçu »",
+      "source.juan": "Promesse détectée dans un e-mail à Juan García",
+      "source.ana": "E-mail : « Modifications de la commande n°4821 »",
+      "source.contrato": "Contrat détecté dans Documents",
+      "source.carlos": "Réunion proposée dans l'e-mail de Carlos Ruiz",
+      "source.diego": "E-mail : « Proposition de partenariat »",
+      "source.raul": "E-mail : « Renouvellement du contrat annuel »",
+      "source.elena": "Opportunité détectée · Elena Vega",
+      "source.laura": "E-mail : « Livraison des assets de branding »",
+      "source.maria": "Silence détecté · 27 jours sans contact",
+      "source.iberdrola": "Facture traitée · échéance 15/06",
+      "source.constructores": "Facture échue il y a 12 jours",
+      "source.hosting": "Échéance de contrat détectée"
+    }
+  },
+  "privacy": {
+    "short": "Tes e-mails sur ton propre serveur privé",
+    "label": "Confidentialité",
+    "title": "La confidentialité avant tout",
+    "body": "Tes e-mails sont stockés sur ton propre serveur privé Cloudflare, sous ton contrôle. Pour l'analyse par IA, seuls de courts extraits sont envoyés à Google Gemini ou Groq —jamais l'e-mail complet— avec tes propres clés.",
+    "close": "Fermer"
+  },
+  "focus": {
+    "toggle": "Mode focus",
+    "on": "Focus",
+    "off": "Focus",
+    "bannerTitle": "Mode focus activé. Seulement le critique.",
+    "bannerSub": "On a masqué tout ce qui peut attendre. Respire.",
+    "digestTitle": "Pendant ta concentration, {{count}} e-mails sont arrivés",
+    "digestSub": "Ces {{count}} méritent ton attention",
+    "digestNone": "Rien d'urgent n'est passé entre les mailles. Bien joué ✨",
+    "dismiss": "Fermer"
+  }
+}
